@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerConnect | Online Job Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#"><span>✦</span> CareerConnect</a>
+    <nav aria-label="Main navigation">
+      <a href="#jobs">Find Jobs</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="post-link" href="#jobs">Explore Jobs ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+        <h1>Find work that<br><span>moves you forward.</span></h1>
+        <p class="hero-description">Discover opportunities from teams building the future. Your next great role is closer than you think.</p>
+        <a class="primary-button" href="#jobs">Browse open jobs <span>→</span></a>
+        <div class="hero-note"><span class="status-dot"></span> New opportunities added every week</div>
+      </div>
+      <div class="hero-art" aria-label="Career illustration">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card">
+          <div class="art-icon">↗</div>
+          <p class="art-small">YOUR CAREER</p>
+          <h2>Make your<br>next move.</h2>
+          <div class="art-line"></div>
+          <div class="art-footer"><span>Explore. Apply. Grow.</span><span>✦</span></div>
+        </div>
+        <div class="floating-tag tag-top">✦  Find your fit</div>
+        <div class="floating-tag tag-bottom"><span class="mini-avatar">CC</span><span><b>Great teams</b><small>are waiting for you</small></span></div>
+      </div>
+    </section>
+
+    <section class="search-section" id="jobs">
+      <div class="section-heading">
+        <div><p class="eyebrow">OPPORTUNITY AWAITS</p><h2>Explore open roles</h2></div>
+        <p class="result-count" id="resultCount">6 opportunities</p>
+      </div>
+      <div class="search-panel">
+        <label class="search-field"><span>⌕</span><input id="searchInput" type="search" placeholder="Job title, skill, or company" aria-label="Search jobs"></label>
+        <label class="select-field"><span>⌖</span><select id="locationFilter" aria-label="Filter by location"><option value="">All locations</option><option>Bengaluru</option><option>Hyderabad</option><option>Chennai</option><option>Remote</option><option>Mumbai</option></select></label>
+        <label class="select-field"><span>▦</span><select id="typeFilter" aria-label="Filter by job type"><option value="">All job types</option><option>Full-time</option><option>Internship</option><option>Contract</option></select></label>
+        <button class="search-button" id="clearFilters" type="button">Reset</button>
+      </div>
+      <div class="job-grid" id="jobGrid" aria-live="polite"></div>
+      <p class="empty-state" id="emptyState" hidden>No jobs match your search. Try changing your filters.</p>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <p class="eyebrow">A SIMPLE WAY FORWARD</p><h2>Your next role in three steps</h2>
+      <div class="steps">
+        <article><span class="step-number">01</span><h3>Discover</h3><p>Search opportunities that fit your interests, skills, and goals.</p></article>
+        <article><span class="step-number">02</span><h3>Apply</h3><p>Choose a role and submit your interest with one simple action.</p></article>
+        <article><span class="step-number">03</span><h3>Grow</h3><p>Take the next step toward work that makes a difference.</p></article>
+      </div>
+    </section>
+
+    <section class="cta-section" id="about">
+      <div><p class="eyebrow">READY FOR WHAT'S NEXT?</p><h2>Your future doesn't<br>have to wait.</h2></div>
+      <a class="light-button" href="#jobs">Find your next job ↗</a>
+    </section>
+  </main>
+
+  <footer><a class="logo" href="#"><span>✦</span> CareerConnect</a><p>Built for people and possibilities.</p><small>© 2026 CareerConnect · Student portfolio project</small></footer>
+
+  <dialog id="applyDialog">
+    <button class="dialog-close" id="closeDialog" aria-label="Close dialog">×</button>
+    <p class="eyebrow">TAKE THE NEXT STEP</p><h2 id="dialogJobTitle">Apply for this role</h2>
+    <p class="dialog-copy">This demo records your application in this browser only. A real version would send it to a backend and SQL database.</p>
+    <form id="applyForm">
+      <label>Your name<input id="applicantName" required placeholder="Enter your full name"></label>
+      <label>Email address<input id="applicantEmail" type="email" required placeholder="you@example.com"></label>
+      <button class="primary-button form-submit" type="submit">Submit application →</button>
+    </form>
+    <p class="form-message" id="formMessage" role="status"></p>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
